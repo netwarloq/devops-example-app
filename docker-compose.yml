@@ -4,6 +4,8 @@ services:
   app:
     build: .
     image: ${{ secrets.DOCKER_USERNAME }}/devops-example-app
+    environment:
+      - SERVER_MESSAGE="Hexlet Awesome Server"
 
   caddy:
     build:
