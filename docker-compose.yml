@@ -4,8 +4,6 @@ services:
   app:
     build: .
     image: netwarloq/devops-example-app
-    environment:
-      - SERVER_MESSAGE="Hexlet Awesome Server"
 
   caddy:
     build:

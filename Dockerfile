@@ -4,6 +4,8 @@ RUN apt-get update && apt-get install -y make
 
 WORKDIR /app
 
+ENV SERVER_MESSAGE="Hexlet Awesome Server"
+
 COPY package*.json ./
 RUN npm ci
 
