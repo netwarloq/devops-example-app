@@ -6,8 +6,8 @@ on:
       - v*
 
 env:
-  APP_IMAGE_NAME: hexletcomponents/devops-example-app
-  CADDY_IMAGE_NAME: hexletcomponents/devops-example-caddy
+  APP_IMAGE_NAME: ${{ secrets.DOCKER_USERNAME }}/devops-example-app
+  CADDY_IMAGE_NAME: ${{ secrets.DOCKER_USERNAME }}/devops-example-caddy
 
 jobs:
   docker:

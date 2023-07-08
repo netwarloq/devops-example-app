@@ -6,7 +6,7 @@ on:
       - 'main'
 
 env:
-  TEST_TAG: hexletcomponents/devops-example-app:test
+  TEST_TAG: ${{ secrets.DOCKER_USERNAME }}/devops-example-app:test
 
 jobs:
   docker:
@@ -37,7 +37,7 @@ jobs:
         with:
           context: .
           push: true
-          tags: hexletcomponents/devops-example-app:latest
+          tags: ${{ secrets.DOCKER_USERNAME }}/devops-example-app:latest
 
       - name: Build and push caddy
         uses: docker/build-push-action@v2
@@ -45,4 +45,4 @@ jobs:
           context: .
           file: services/caddy/Dockerfile
           push: true
-          tags: hexletcomponents/devops-example-caddy:latest
+          tags: ${{ secrets.DOCKER_USERNAME }}/devops-example-caddy:latest
