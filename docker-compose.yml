@@ -3,7 +3,7 @@ version: "3"
 services:
   app:
     build: .
-    image: ${{ secrets.DOCKER_USERNAME }}/devops-example-app
+    image: netwarloq/devops-example-app
     environment:
       - SERVER_MESSAGE="Hexlet Awesome Server"
 
@@ -11,4 +11,4 @@ services:
     build:
       context: .
       dockerfile: services/caddy/Dockerfile
-    image: ${{ secrets.DOCKER_USERNAME }}/devops-example-caddy
+    image: netwarloq/devops-example-caddy
