@@ -17,7 +17,7 @@
         # супервизор докера его перезапустить
         restart_policy: always
         # Запускаем если не запущен
-        state: present
+        state: started
         networks:
           - name: devops-example
         # Делаем доступным снаружи
@@ -30,7 +30,7 @@
         name: caddy
         image: "netwarloq/devops-example-caddy:{{ version }}"
         restart_policy: always
-        state: present
+        state: started
         networks:
           - name: devops-example
         ports:
