@@ -1,4 +1,4 @@
-localhost, devops-example.test {
+localhost, hexletnetwarloq.tk {
 	tls internal
 
 	handle /images/* {
