@@ -25,6 +25,7 @@
           - 3000:3000
         env: # Настраиваем
           NODE_ENV: production
+          SERVER_MESSAGE: "Hexlet Awesome Server!!! This is server {{ ansible_hostname }}"
 
     - community.docker.docker_container:
         name: caddy
